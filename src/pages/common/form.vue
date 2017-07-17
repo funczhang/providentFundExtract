@@ -11,20 +11,27 @@
         vue-input(title="提取金额（元）",type="number",placeholder="请填写需要提取的金额",ml="50",tip="当前余额：",acount="2225.41")
         vue-input(title="开户银行",type="number",placeholder="请填写申请人本人储蓄卡开户银行",ml="20")
         vue-input(title="储蓄卡账号",type="number",placeholder="请填写申请人本人储蓄卡开户银行",ml="20")
+    vue-button(title="申请",@btnClick="btnApply")
 </template>
 <script>
 import input from '../../components/common/input'
+import button from '../../components/common/button'
 export default {
     name: 'form',
     components: {
-        'vue-input': input
+        'vue-input': input,
+        'vue-button':button
     },
     data() {
         return {
 
         }
     },
-    methods: {},
+    methods: {
+        btnApply(){
+            console.log('apply...');
+        }
+    },
     mounted() { }
 }
 </script>
