@@ -17,10 +17,11 @@
 import input from '../../components/common/input'
 import button from '../../components/common/button'
 export default {
+    //该页面为自定义组件，mint-ui field组件功能相比全面一些 
     name: 'form',
     components: {
         'vue-input': input,
-        'vue-button':button
+        'vue-button': button
     },
     data() {
         return {
@@ -28,8 +29,10 @@ export default {
         }
     },
     methods: {
-        btnApply(){
+        btnApply() {
+            var self = this;
             console.log('apply...');
+            self.$router.push('/apply.vue');
         }
     },
     mounted() { }
@@ -55,6 +58,10 @@ export default {
 .form-panel {
     padding: 0.5rem 0;
 }
+
+// .mint-field .mint-cell-title{
+//     width: 120px !important;
+// }
 </style>
 
 

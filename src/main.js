@@ -5,8 +5,12 @@ import App from './App'
 import Vuex from "vuex"
 import router from './router'
 import store from './store'
-import './assets/js/scale'
+import '../static/plugins/scale'
 import './assets/css/base.css'
+import MintUI from 'mint-ui'
+import '../static/css/mintui.css' //最嗨的是他这个直接引入的是一个css文件
+
+Vue.use(MintUI);
 Vue.config.productionTip = false
     /* eslint-disable no-new */
 new Vue({

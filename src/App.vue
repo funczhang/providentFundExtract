@@ -20,4 +20,7 @@ body{
   background:#f4f4f4;
 }
 .btn-normal {}
+.mint-field .mint-cell-title{
+  width:6rem;
+}
 </style>

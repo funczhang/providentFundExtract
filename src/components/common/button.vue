@@ -16,12 +16,12 @@ export default {
         padding:0.8rem 0;
         margin:1rem auto;
         display: block;
-        width:90%;
+        width:94%;
         height:1rem;
         text-align: center;
         background:#ff0055;
         color:#fff;
         font:bold 0.85rem/1rem "微软雅黑";
-        border-radius: 8px;
+        border-radius: 5px;
     }
 </style>
