@@ -84,6 +84,7 @@ h6 {
 a {
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
 }
 
 body {
@@ -99,11 +100,6 @@ input {
 
 label {
     cursor: hand;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0px;
 }
 
 q:before,
@@ -138,10 +134,6 @@ input {
     border: 0;
 }
 
-table {
-    background: #ffffff;
-}
-
 
 /* 通用 */
 
@@ -152,6 +144,7 @@ table {
 
 ::-moz-placeholder {
     color: #999;
+    font-size: 0.75rem;
 }
 
 
@@ -159,6 +152,7 @@ table {
 
 :-ms-input-placeholder {
     color: #999;
+    font-size: 0.75rem;
 }
 
 
@@ -166,46 +160,22 @@ table {
 
 input:-moz-placeholder {
     color: #999;
+    font-size: 0.75rem;
 }
 
 
 /*-------------- base.css --------------------*/
 
-.split-line {
-    margin-left: 10px;
-    margin-right: 10px;
-    display: inline-block;
-    width: 75px;
-    height: 2px;
-    background-color: #dbdbdb;
-}
-
-.l {
+.fl {
     float: left;
 }
 
-.r {
+.fr {
     float: right;
-}
-
-.z {
-    *zoom: 1;
-}
-
-.center {
-    margin: 0 auto;
 }
 
 .hide {
     display: none;
-}
-
-.block {
-    display: block;
-}
-
-.nowrap {
-    white-space: nowrap;
 }
 
 .clear {
@@ -215,21 +185,13 @@ input:-moz-placeholder {
 }
 
 
-/*块状元素水平居中*/
-
-.auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 /*清除浮动*/
 
-.fix {
+.clearfix {
     *zoom: 1;
 }
 
-.fix:after {
+.clearfix:after {
     display: block;
     content: "clear";
     height: 0;
@@ -245,31 +207,4 @@ input:-moz-placeholder {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-}
-
-
-/*红色标记*/
-
-.mark {
-    font-weight: bold;
-    color: #ff0000;
-}
-
-
-/*字符型图标样式*/
-
-.symbol {
-    font-size: 14px;
-    font-weight: bold;
-    color: #0066cc;
-}
-
-
-/*主区域区背景*/
-
-.main-eara {
-    margin: 0 auto;
-    text-align: center;
-    width: 1003px;
-    background-color: #fff;
 }
