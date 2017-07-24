@@ -7,10 +7,13 @@ const state = {
     userInfo: {
         userId: '',
         idCard: '',
-        phoneNum: '',
-        userName: '',
+        phone: '',
+        name: '',
+        oid: '',
+        aiop: '',
+        yuanyin: '',
+        aIXiYuanyin: '', //和上面yuanyin字段一致
         isAuth: '',
-        source: ''
     },
     submitInfo: {
 

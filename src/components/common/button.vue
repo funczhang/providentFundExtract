@@ -16,7 +16,7 @@ export default {
         padding:0.8rem 0;
         margin:1rem auto;
         display: block;
-        width:94%;
+        width:96%;
         height:1rem;
         text-align: center;
         background:#ff0055;
