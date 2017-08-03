@@ -7,12 +7,12 @@ export default new Router({
     routes: [{
             path: "/",
             name: "apply",
-            component: resolve => require(["../pages/common/applyForm.vue"], resolve)
+            component: resolve => require(["../pages/common/form.vue"], resolve)
         },
         {
             path: "/form",
             name: "form",
-            component: resolve => require(["../pages/common/form.vue"], resolve)
+            component: resolve => require(["../pages/common/applyForm.vue"], resolve)
         }
     ]
 });

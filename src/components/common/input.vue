@@ -1,20 +1,35 @@
 <template lang="pug">
   div(class="vue-input ell")
-    label {{title}}
-    input(:type="type",:placeholder="placeholder",:value="val",:maxlength="ml")
-    p(class="tip",v-show="tip") {{tip+acount}}
+    div(class="input-box")
+        label {{title}}
+        template(v-if="type == 'text'",)
+            input(type="text",:placeholder="placeholder",v-model="val",:maxlength="ml")
+            i(v-show="val != ''",@click="clearInput") ×
+        template(v-if="type == 'number'",)
+            input(type="number",:placeholder="placeholder",v-model="val",:maxlength="ml")
+            i(v-show="val != ''",@click="clearInput") ×
 </template>
 <script>
 export default {
     name: 'input',
-    props: ['title', 'type', 'placeholder', 'val', 'ml', 'tip', 'acount'],
+    props: ['options', 'title', 'type', 'placeholder', 'value', 'ml'],
     data() {
         return {
-            info: ''
+            info: '',
+            val: ''
         }
     },
     methods: {
+        clearInput() {
+            this.val = '';
+        }
+    },
+    computed: {
+    },
+    watch: {
+        val(newVal, oldVal) {
 
+        }
     },
     mounted() { },
     filters: {
@@ -32,38 +47,58 @@ input:-moz-placeholder,
 input::-moz-placeholder,
 input :-ms-input-placeholder {
     /* WebKit browsers */
-    font-size: 0.7rem;
-    font-family: "微软雅黑";
+    font-size: 0.75rem;
     color: #999;
 }
 
 .vue-input {
-    padding: 0.5rem;
-    border-bottom: 1px solid #eaeaea;
     background: #fff;
+    .input-box {
+        display: flex;
+        padding: 0.5rem;
+        margin-left: 0.625rem;
+        border-bottom: 1px solid #eaeaea;
+    }
+    i {
+        display: block;
+        margin: auto 0;
+        width: 16px;
+        height: 16px;
+        font-style: normal;
+        font-size: 16px;
+        background: rgba(0, 0, 0, .2);
+        border-radius: 50%;
+        color: #fff;
+        line-height: 14px;
+        text-align: center;
+    }
     label {
-        float: left;
-        display: inline-block;
-        width: 35%;
+        flex: 2;
+        height: 1.625rem;
         font-size: 0.8rem;
-        line-height: 1.3rem;
+        line-height: 1.625rem;
         vertical-align: middle;
         color: #000;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     input {
-        float: left;
         display: block;
-        width: 65%;
+        padding-right: 5px;
+        flex: 4;
+        height: 1.625rem;
         font-size: 0.65rem;
-        line-height: 1.3rem;
-        vertical-align: middle;
+        line-height: 1.625rem; // vertical-align: middle;
     }
     .tip {
-        padding: 0.2rem 0;
-        width: 65%;
-        float: right;
-        font-weight: bold;
+        position: relative;
+        top: 4px;
+        font-size: 0.65rem;
         color: orange;
+    }
+    .tip:after {
+        content: '\2718';
     }
 }
 </style>

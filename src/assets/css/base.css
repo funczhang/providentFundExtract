@@ -3,6 +3,7 @@
 
 /* --Elements-- */
 
+html,
 body,
 div,
 dl,
@@ -30,7 +31,6 @@ th,
 td {
     margin: 0;
     padding: 0;
-    font-family: '微软雅黑';
 }
 
 img {
@@ -42,28 +42,9 @@ fieldset {
     border: 0;
 }
 
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-    font-style: normal;
-    font-weight: normal;
-}
-
 ol,
 ul {
     list-style: none;
-}
-
-dt,
-dd,
-li {
-    position: relative;
 }
 
 caption,
@@ -78,18 +59,12 @@ h4,
 h5,
 h6 {
     font-weight: normal;
-    font-size: 100%;
 }
 
 a {
     text-decoration: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     cursor: pointer;
-}
-
-body {
-    margin: 0;
-    word-break: break-all;
 }
 
 select,
@@ -100,11 +75,6 @@ input {
 
 label {
     cursor: hand;
-}
-
-q:before,
-q:after {
-    content: ”;
 }
 
 abbr,

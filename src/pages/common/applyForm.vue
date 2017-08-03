@@ -10,7 +10,7 @@
     div(class="acount-field")
         div(class="inner-box")
             <mt-field label="提取金额(元)" placeholder="请填写需要提取的金额" type="number" :attr="{ maxlength: 20 }"></mt-field>
-            p 当前余额： 44556677.000元               
+            p 当前余额： 445.000元               
     mt-field(label="开户银行" placeholder="请填写申请人本人储蓄卡开户银行" type="text" :attr="{ maxlength: 18 }")
     mt-field(label="储蓄卡账号" placeholder="请填写申请人本人储蓄卡开户银行" type="number" :attr="{ maxlength: 18 }")
     div(class="module-head material-head") 

@@ -21,7 +21,7 @@ export default {
         text-align: center;
         background:#ff0055;
         color:#fff;
-        font:bold 0.85rem/1rem "微软雅黑";
+        font:normal 0.75rem/1rem "微软雅黑";
         border-radius: 5px;
     }
 </style>
